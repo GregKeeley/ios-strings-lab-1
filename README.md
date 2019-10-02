@@ -1,3 +1,4 @@
+
 # Strings Lab 1
 
 ## Instructions for lab submission
@@ -60,6 +61,7 @@ print(str3)
 ## Question 4
 
 Print each character in the string `"Hello world!"`
+
 Answer
 ```swift
 var greeting = "Hello world!"
@@ -97,6 +99,17 @@ Write code that switches on a string, given the following conditions:
 
 Initialize a String with a character. Show that it is a Character, and not another String, that you're using to initialize it.
 
+Answer
+```swift
+let char7: Character = "d"
+
+if char7 == Character {
+    print("\(char7) is a character")
+} else {
+    print("\(char7) is not a character")
+}
+// Hopefully I can come back and fix this one, not my final answer, does not compile
+```
 ***
 ## Question 8
 
@@ -165,15 +178,18 @@ Flower Box:
 Write a program that sets up a chess board using Unicode.
 
 ```swift
-Chess Board:
-♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖
-♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙
+let chessBoard = """
+\u{265C} \u{265E} \u{265D} \u{265B} \u{265A} \u{265D} \u{265E} \u{265C}
+\u{265F} \u{265F} \u{265F} \u{265F} \u{265F} \u{265F} \u{265F} \u{265F}
 
 
 
+\u{265F} \u{265F} \u{265F} \u{265F} \u{265F} \u{265F} \u{265F} \u{265F}
+\u{2656} \u{2658} \u{2657} \u{2655} \u{2654} \u{2657} \u{2658} \u{2656}
+"""
+// I wish the spacing was better
 
-♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟
-♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜
+print(chessBoard)
 ```
 
 ***
@@ -181,9 +197,13 @@ Chess Board:
 
 You are given a string stored in the variable `aString`. Create new string named `replacedString` that contains the characters of the original string with all the occurrences of the character `"e"` replaced by `"*"`.
 
+Answer
 ```swift
-var aString = "Replace the letter e with *"
-// Your code here
+var aString14 = "Replace the letter \"e\" with \"*\""
+
+let newAString14 = aString14.replacingOccurrences(of:"e", with:"*")
+print(aString14)
+print(newAString14)
  ```
 
 Example:
@@ -219,23 +239,23 @@ Output:
 ```swift
 
 
-var geographicLocation: String
-var adjective1: String
-var pluralNoun1: String
-var adjective2: String
-var pluralNoun2: String
-var number1: Int
-var number2: Int
-var articleOfClothing: String
+var geographicLocation: Woodside
+var adjective1: stringy
+var pluralNoun1: dogs
+var adjective2: long
+var pluralNoun2: shards
+var number1: 459
+var number2: 12
+var articleOfClothing: pants
 
-var madLib = "Here is tomorrow's weather report for \()
-and vicinity. Early tomorrow, a \()-front will
-collide with a mass of hot \() moving from the
-north. This means we can expect \() winds and
-occasional \() by late afternoon. Wind velocity will
-be \() miles an hour, and the high temperature should
-be around \() degrees. So, if you're going out, you had
-better plan on wearing your \()".
+var madLib = "Here is tomorrow's weather report for \(geographicLocation)
+and vicinity. Early tomorrow, a \(adjective1)-front will
+collide with a mass of hot \(pluralNoun1) moving from the
+north. This means we can expect \(adjective2) winds and
+occasional \(pluralNoun2) by late afternoon. Wind velocity will
+be \(number1) miles an hour, and the high temperature should
+be around \(number2) degrees. So, if you're going out, you had
+better plan on wearing your \(articleOfClothing)".
 ```
 
 ***
