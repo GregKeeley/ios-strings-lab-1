@@ -233,29 +233,38 @@ Input:
 Output:
 `"olleH"`
 
+Answer
+```swift
+var aString15 = "this string has 29 characters"
+for char in aString15.reversed() {
+print(char, terminator: "")
+}
+```
 
 ## 16. Mad-Libs! Add a value to the declared variables below in playgrounds. Insert the variables (already in correct order) inside the stringmadLib and print. 
 
 ```swift
 
-
-var geographicLocation: Woodside
-var adjective1: stringy
-var pluralNoun1: dogs
-var adjective2: long
-var pluralNoun2: shards
-var number1: 459
-var number2: 12
-var articleOfClothing: pants
-
-var madLib = "Here is tomorrow's weather report for \(geographicLocation)
+let geographicLocation = "Woodside"
+let adjective1 = "stringy"
+let pluralNoun1 = "dogs"
+let adjective2 = "long"
+let pluralNoun2 = "shards"
+let number1:String = "459"
+let number2:String = "12"
+var articleOfClothing = "pants"
+print("")
+var madLib = """
+Here is tomorrow's weather report for \(geographicLocation)
 and vicinity. Early tomorrow, a \(adjective1)-front will
 collide with a mass of hot \(pluralNoun1) moving from the
 north. This means we can expect \(adjective2) winds and
 occasional \(pluralNoun2) by late afternoon. Wind velocity will
 be \(number1) miles an hour, and the high temperature should
 be around \(number2) degrees. So, if you're going out, you had
-better plan on wearing your \(articleOfClothing)".
+better plan on wearing your \(articleOfClothing).
+"""
+print(madLib)
 ```
 
 ***
